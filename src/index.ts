@@ -1,13 +1,12 @@
 import express from "express";
-
+const PORT = process.env.PORT || 3003;
 const app = express();
 
 app.get("/", (req, res) => {
     res.send("Hello");
 });
 
-app.listen(3003, () => {
-    console.log("Server started");
+app.listen(PORT, () => {
+    console.log(`Server started on port ${PORT}`);
 
-    console.log("Hello GitT");
 });
